@@ -46,12 +46,12 @@ def filedownload(df):
 
 @st.cache_resource
 def load_model():
-    return pk.load(open("The_Latest_Diabetes_Model.sav", "rb"))
+    return pk.load(open("Diabetes_Model.sav", "rb"))
 
 
 @st.cache_resource
 def load_scaler():
-    return pk.load(open("my_saved_std_scaler.pkl", "rb"))
+    return pk.load(open("diabetes_std_scaler.pkl", "rb"))
 
 #single prediction function
 def Diabetes(givendata):
