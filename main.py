@@ -83,7 +83,7 @@ def main():
     # AGE (mapped from dataset definition)
     # ======================
     age = st.number_input(
-        "Age (13-level category: 1=18-24 ... 13=80+)",
+        "Age (1 = 18-24  9 = 60-64   13 = 80 or older )",
         min_value=0,
         max_value=13,
         value=0,
@@ -134,12 +134,12 @@ def main():
     )
 
     option9 = st.selectbox(
-        "Fruit Consumption (1+ times per day)",
+        "Fruit Consumption (Consume Fruit 1 or more times per day?)",
         ("", "Yes", "No")
     )
 
     option10 = st.selectbox(
-        "Vegetable Consumption (1+ times per day)",
+        "Vegetable Consumption (Consume Vegetables 1 or more times per day)",
         ("", "Yes", "No")
     )
 
@@ -169,7 +169,7 @@ def main():
     )
 
     Income = st.number_input(
-        "Income (1–8 scale: 1 < $10k ... 8 ≥ $75k)",
+        "Income (scale 1-8     1 = less than $10,000   5 = less than $35,000    8 = $75,000 or more)",
         min_value=0,
         max_value=8,
         value=0
@@ -261,7 +261,7 @@ def main():
 
 
 def multi(input_data):
-    loaded_model=pk.load(open("The_Latest_Diabetes_Model.sav", "rb"))
+    loaded_model=pk.load(open("Diabetes_Model.sav", "rb"))
     dfinput = pd.read_csv(input_data)
     # dfinput=dfinput.iloc[1:].reset_index(drop=True)
 
@@ -270,7 +270,7 @@ def multi(input_data):
     st.dataframe(dfinput)
 
     dfinput=dfinput.values
-    std_scaler_loaded=pk.load(open("my_saved_std_scaler.pkl", "rb"))
+    std_scaler_loaded=pk.load(open("diabetes_std_scaler.pkl", "rb"))
     std_dfinput=std_scaler_loaded.transform(dfinput)
     
     
