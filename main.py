@@ -83,7 +83,7 @@ def main():
     # AGE (mapped from dataset definition)
     # ======================
     age = st.number_input(
-        "Age (1 = 18-24  9 = 60-64   13 = 80 or older )",
+        "Age (1 = 18-24  ; 9 = 60-64  ; 13 = 80 or older )",
         min_value=0,
         max_value=13,
         value=0,
@@ -169,7 +169,7 @@ def main():
     )
 
     Income = st.number_input(
-        "Income (scale 1-8     1 = less than $10,000   5 = less than $35,000    8 = $75,000 or more)",
+        "Income (1 = less than $10,000 ;  5 = less than $35,000  ;  8 = $75,000 or more)",
         min_value=0,
         max_value=8,
         value=0
