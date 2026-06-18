@@ -114,7 +114,7 @@ def main():
     )
 
     option5 = st.selectbox(
-        "Stroke (Ever told you had a stroke) (0 = No, 1 = Yes)",
+        "Stroke (Ever told you had a stroke)",
         ("", "Yes", "No")
     )
 
