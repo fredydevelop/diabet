@@ -159,7 +159,7 @@ def main():
     # ======================
     # NUMERIC INPUTS
     # ======================
-    BMI = st.slider("BMI (Body Mass Index)", 10, 60, 25)
+    BMI = st.slider("BMI (Body Mass Index)", 10, 60, 10)
 
     PhysHlth = st.number_input(
         "Physical Health (Days of illness/injury in past 30 days)",
